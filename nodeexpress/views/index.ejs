@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Book Management</h1>
+    <form action="/addbook">
+        <button type="submit" name="add" id="add" value="add">Add Book</button>
+    </form>
+    <table border="2">
+        <tr>
+            <th>Book Id</th>
+            <th>Book Title</th>
+            <th>Book Author</th>
+            <th>Book Price</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        <% for(var i=0;i<bookdata.length;i++){%>
+        <tr>
+            <td><%= bookdata[i].book_id%></td>
+            <td><%= bookdata[i].title%></td>
+            <td><%= bookdata[i].author%></td>
+            <td><%= bookdata[i].price%></td>
+            <td><a href="/deletebook/<%=bookdata[i].book_id%>">delete</a></td>
+            <td><a href="/updatebook/<%=bookdata[i].book_id%>">update</a></td>
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>

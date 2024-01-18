@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="/updatebook">
+    Book Id: <input type="text" name="bid" id="id" value="<%=bookdata[0].book_id%>" readonly/><br/>
+    Book Title: <input type="text" name="title" id="title" value="<%=bookdata[0].title%>"/><br/>
+    Book Author: <input type="text" name="author" id="author" value="<%=bookdata[0].author%>"/><br/>
+    Book Price: <input type="text" name="price" id="price" value="<%=bookdata[0].price%>"/><br/>
+    <button type="submit" name="btn" id="btn" value="btn">Update</button>
+   </form> 
+</body>
+</html>
